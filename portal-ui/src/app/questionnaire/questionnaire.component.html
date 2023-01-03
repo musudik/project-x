@@ -1,0 +1,49 @@
+<div class="container">
+  <!-- Services Start -->
+  <div class="container-fluid py-5">
+    <div class="container pt-5 pb-3">
+      <h1 class="display-4 text-uppercase text-center mb-5"><span class="text-primary">Questionnaire</span> </h1>
+      <div class="container">
+        <div *ngIf="this.reconProgram != null">
+            <div class="alert alert-success" *ngIf="msg">
+              {{ msg }}.
+            </div>
+            <span class="display-7 text-uppercase text-center mb-5">
+              <h2 class="display-7 text-uppercase text-center mb-5">Here is the Program Recommendation <a (click)="registerProgram(this.reconProgram.programId)" class="btn btn-primary text-uppercase text-center mb-2">{{this.reconProgram.program_name}}</a> click to register </h2>
+            </span>
+            <br/><br/><br/>
+            <button class="row btn btn-primary" (click)="startAgain();">Start Again</button>
+        </div>
+        <div *ngIf="this.reconProgram == null">
+          <h2 class="display-4 text-uppercase text-center mb-5">For Program Recommendation </h2>
+          <h2 class="row display-5 text-uppercase text-center mb-5">
+            {{currentQuestion.question}}
+          </h2>
+          <br/>
+          <div class="column options">
+            <div *ngIf="currentQuestion.answers.length == 0">
+
+              <div class="w-100 mb-3">
+                <div class="input-group">
+                  <input type="text" class="form-control border-light" style="padding: 25px;"  value="{{answer}}" placeholder="{{currentQuestion.question}}">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary text-uppercase px-3" (click)="onEnter(currentQuestion, answer);">Next</button>
+                  </div>
+                </div>
+              </div>
+              <br/><br/><br/>
+            </div>
+            <div *ngIf="currentQuestion.answers.length > 0">
+              <div class="row" *ngFor="let answer of currentQuestion.answers" >
+                  <h2 class="display-8 text-uppercase text-center mb-5">
+                    <input class="larger" id="{{answer.answerId}}" type="checkbox" [(ngModel)]="answer.selected" (change)="onSelect(currentQuestion, answer);" /> {{answer.answer}}
+                  </h2>
+                <br/><br/><br/>
+              </div>
+              <button class="row btn btn-primary" (click)="onNext();">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

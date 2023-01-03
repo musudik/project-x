@@ -1,0 +1,35 @@
+<div class="container">
+  <!-- Services Start -->
+  <div class="container-fluid py-5">
+    <div class="container pt-5 pb-3">
+      <h1 class="display-4 text-uppercase text-center mb-5">Program <span class="text-primary">Activities</span></h1>
+      <div class="row">
+        <div class="col-lg-4 mb-2">
+          <div class="service-item rounded p-5 mb-4">
+            <i class="fa fa-3x fa-laptop-code text-primary mb-4"></i>
+            <h4 class="text-uppercase mb-7">{{this.reconProgram.program_name}}</h4>
+            <p class="m-0">{{this.reconProgram.description}}</p>
+          </div>
+        </div>
+        <div class="col-lg-8 mb-2">
+            <form [formGroup]="activityForm" (ngSubmit)="onFormSubmit()">
+              <mat-selection-list formControlName="selectedActivity">
+                <div class="service-item rounded p-5 mb-4">
+                <mat-list-option *ngFor="let activity of activities" [selected]="activity.selected" [value]="activity.activityId">
+                  <h4 class="text-uppercase mb-7" title="{{activity.activity}}"><span class="text-primary">{{activity.activity}}</span></h4>
+                  <h4 class="text-uppercase mb-7" title="{{activity.description}}">{{activity.description}}</h4>
+                </mat-list-option>
+                </div>
+              </mat-selection-list>
+              <a (click)="updateActivities()" class="btn btn-primary text-uppercase py-2 px-4 my-3">Update</a>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Services End -->
+
+  <div class="alert alert-success" *ngIf="msg">
+    {{ msg }}
+  </div>
+</div>

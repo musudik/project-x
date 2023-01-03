@@ -1,0 +1,72 @@
+<div class="container">
+  <!-- Services Start -->
+  <div class="container-fluid py-5">
+    <div class="container pt-5 pb-3">
+      <h1 class="display-4 text-uppercase text-center mb-5">Top Health <span class="text-primary">Programs</span></h1>
+      <div class="row">
+        <div class="col-lg-3 mb-2">
+          <div class="service-item rounded p-5 mb-4">
+            <i class="fa fa-3x fa-laptop-code text-primary mb-4"></i>
+            <h4 class="text-uppercase mb-4">Weight<span class="d-block text-body">Loss</span></h4>
+            <p class="m-0">Weight loss programs that offer counseling and education</p>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-2">
+          <div class="service-item rounded p-5 mb-4">
+            <i class="fa fa-3x fa-code text-primary mb-4"></i>
+            <h4 class="text-uppercase mb-4">Self<span class="d-block text-body">Management</span></h4>
+            <p class="m-0">Chronic disease self-management tools</p>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-2">
+          <div class="service-item rounded p-5 mb-4">
+            <i class="fa fa-3x fa-envelope-open-text text-primary mb-4"></i>
+            <h4 class="text-uppercase mb-4">Vaccination<span class="d-block text-body">Program</span></h4>
+            <p class="m-0">On-site all kinds of vaccines for all ages</p>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-2">
+          <div class="service-item rounded p-5 mb-4">
+            <i class="fa fa-3x fa-edit text-primary mb-4"></i>
+            <h4 class="text-uppercase mb-4">Family  <span class="d-block text-body">Care</span></h4>
+            <p class="m-0">Customized health care program for entire family</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Services End -->
+
+  <div class="alert alert-success" *ngIf="msg">
+    {{ msg }}.
+  </div>
+
+  <header class="jumbotron">
+    <h2 class="display-4 text-uppercase text-center mb-5">Available Programs To Enroll</h2>
+    <div class="container">
+      <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Program Name</th>
+          <th>Description</th>
+          <th>Register</th>
+          <th>Progress</th>
+        </tr>
+        </thead>
+        <tbody>
+        <ng-container *ngFor="let program of programs">
+        <tr>
+          <td>{{program.programId}}</td>
+          <td>{{program.program_name}}</td>
+          <td>{{program.description}}</td>
+          <td><a *ngIf="!userPrograms.includes(program.programId)" (click)="registerProgram(program.programId)" class="btn btn-primary text-uppercase py-2 px-4 my-3">Register</a>
+              <a *ngIf="userPrograms.includes(program.programId)" (click)="deregisterProgram(program.programId)" class="btn btn-dark text-uppercase py-2 px-4 my-3">Deregister</a></td>
+          <td><a *ngIf="userPrograms.includes(program.programId)" class="btn btn-dark text-uppercase py-2 px-4 my-3 mb-5" (click)="goToActivities(program.programId)">Activities</a></td>
+        </tr>
+        </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </header>
+</div>

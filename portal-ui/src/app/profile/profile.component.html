@@ -1,0 +1,155 @@
+<!-- Header Start -->
+<!--div class="container-fluid bg-primary py-5 px-0" style="margin-bottom: 10px;">
+  <div class="row mx-0 align-items-center">
+    <div class="col-lg-6 px-md-5 text-center text-lg-left" *ngIf="currentUser; else loggedOut">
+      <h1 class="display-6 text-uppercase mb-3">{{ currentUser.username }}'s Profile</h1>
+      <img class="img-fluid rounded mx-auto my-3" src="assets/img/testimonial-4.jpg" alt="">
+      <span>
+        <h4 class="text-uppercase">{{ currentUser.firstName }} {{ currentUser.lastName }}</h4>
+      </span>
+    </div>
+  </div>
+</div>
+<div class="row mx-0 align-items-center  px-5" style="margin-bottom: 20px;">
+    <span>
+        <h4 class="text-uppercase"><span class="text-primary">Email:</span> {{ currentUser.email }}</h4>
+        <h4 class="text-uppercase"><span class="text-primary">Role:</span> {{ currentUser.role }}</h4>
+        <h4 class="text-uppercase"><span class="text-primary">Username:</span>  {{ currentUser.username }}</h4>
+        <h4 class="text-uppercase"><span class="text-primary">ID:</span>  {{ currentUser.id }}</h4>
+        <h4 class="text-uppercase"><span class="text-primary">Registered On:</span>  {{ currentUser.createdDate }}</h4>
+    </span>
+</div>
+<div class="row mx-0 align-items-center  px-5">
+    <h3 class="text-uppercase text-primary mb-3">Programs Enrolled</h3>
+      <ng-container *ngFor="let program of currentUser.programs">
+        <div class="row mx-0 align-items-center px-5">
+          <span>
+          <h4 class="text-uppercase">{{ program.program_name }}</h4>
+          </span>
+        </div>
+      </ng-container>
+</div>
+<div class="row mx-0 align-items-center  px-5">
+  <h3 class="text-uppercase text-primary mb-3">Awards Achieved</h3>
+  <ng-container *ngFor="let reward of currentUser.rewards">
+    <div class="row mx-0 align-items-center px-5">
+          <span>
+          <h4 class="text-uppercase">{{ reward.reward_name }}</h4>
+          </span>
+    </div>
+  </ng-container>
+</div-->
+
+
+<div class="container">
+  <div class="header-container">
+    <img src="https://s17.postimg.cc/ypm5ye95r/image.jpg" alt="" class="header-image" />
+    <div class="header">
+      <svg fill="#ffffff" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg" class="header-icon">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+      </svg>
+
+      <svg fill="#ffffff" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg" class="u-float-right header-icon">
+        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+        <path d="M0 0h24v24H0z" fill="none"/>
+      </svg>
+      <h1 class="main-heading text-primary">{{ currentUser.firstName }} {{ currentUser.lastName }}</h1>
+      <span class="tag">Software Engineer</span>
+      <span class="tag">Sports Trainer</span>
+      <div class="stats">
+        <span class="stat-module">
+          Role: <span class="stat-number">{{ currentUser.role }}</span>
+        </span>
+        <span class="stat-module">
+          Programs: <span class="stat-number">{{currentUser.programs.length}}</span>
+        </span>
+        <span class="stat-module">
+          Awards: <span class="stat-number">{{currentUser.rewards.length}}</span>
+        </span>
+      </div>
+    </div> <!-- END header -->
+  </div>
+
+  <div class="overlay-header"></div>
+
+  <div class="body">
+    <img src="assets/img/testimonial-4.jpg" alt="{{ currentUser.firstName }} {{ currentUser.lastName }}" class="body-image" />
+    <div class="body-action-button u-flex-center">
+      <svg fill="#ffffff" height="28" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+        <path d="M0 0h24v24H0z" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="u-clearfix"></div>
+    <div class="body-info">
+      <!--p>
+        Profile of {{ currentUser.firstName }} {{ currentUser.lastName }}
+      </p-->
+    </div>
+
+    <div class="card u-clearfix">
+      <span class="card-heading"><h4 class="text-uppercase text-primary"><i class="fa fa-user"></i> Name</h4></span>
+      <ul class="card-list">
+        <div class="row mx-0 align-items-center px-5">
+          <h4 class="text-uppercase">{{ currentUser.firstName }} {{ currentUser.lastName }}</h4>
+        </div>
+      </ul>
+      <span class="card-heading"><h4 class="text-uppercase text-primary"><i class="fa fa-heartbeat"></i> Age</h4></span>
+      <ul class="card-list">
+        <div class="row mx-0 align-items-center px-5">
+          <h4 class="text-uppercase">27</h4>
+        </div>
+      </ul>
+      <span class="card-heading"><h4 class="text-uppercase text-primary"><i class="fa fa-envelope"></i> Email</h4></span>
+      <ul class="card-list">
+        <div class="row mx-0 align-items-center px-5">
+          <h4 class="text-uppercase">{{ currentUser.email}}</h4>
+        </div>
+      </ul>
+      <span class="card-heading"><h4 class="text-uppercase text-primary"><i class="fa fa-user"></i> Username</h4></span>
+      <ul class="card-list">
+        <div class="row mx-0 align-items-center px-5">
+          <h4 class="text-uppercase">{{ currentUser.username}}</h4>
+        </div>
+      </ul>
+      <span class="card-heading"><h4 class="text-uppercase text-primary"><i class="fa fa-calendar-alt"></i> Registered On</h4></span>
+      <ul class="card-list">
+        <div class="row mx-0 align-items-center px-5">
+          <h4 class="text-uppercase">{{ currentUser.createdDate }}</h4>
+        </div>
+      </ul>
+      <span class="card-heading"><h4 class="text-uppercase text-primary"><i class="fa fa-tasks"></i> Programs</h4></span>
+      <ul class="card-list">
+        <ng-container *ngFor="let program of currentUser.programs">
+          <div class="row mx-0 align-items-center px-5">
+            <span>
+              <h4 class="text-uppercase"><i class="fa fa-check-square"></i> {{ program.program_name }}</h4>
+            </span>
+          </div>
+        </ng-container>
+      </ul>
+      <span class="card-heading"><h4 class="text-uppercase text-primary"><i class="fa fa-star"></i> Rewards</h4></span>
+      <ul class="card-list">
+        <ng-container *ngFor="let reward of currentUser.rewards">
+          <div class="row mx-0 align-items-center px-5">
+            <span>
+              <h4 class="text-uppercase"><i class="fa fa-trophy"></i> {{ reward.reward_name }}</h4>
+            </span>
+          </div>
+        </ng-container>
+      </ul>
+      <ul class="card-list">
+        <li><img src="https://s12.postimg.cc/c0ryp65lp/m1f.jpg" alt="" /></li>
+        <li><img src="https://s14.postimg.cc/6ts0it3xt/m2f.jpg" alt="" /></li>
+        <li><img src="https://s13.postimg.cc/ri499o2zr/m3f.jpg" alt="" /></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<ng-template #loggedOut>
+  Please login.
+</ng-template>

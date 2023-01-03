@@ -1,0 +1,42 @@
+<div class="container">
+  <!-- Services Start -->
+  <div class="container-fluid py-5">
+    <div class="container pt-5 pb-3">
+      <h1 class="display-4 text-uppercase text-center mb-5"><span class="text-primary">Rewards</span> on Program Completion</h1>
+      <div class="row">
+        <div class="horizontal pr-10">
+          <ng-container *ngFor="let reward of rewards">
+                <div class="col-lg-4 mb-2">
+                  <div class="bg-dark rounded text-center pt-5 mb-4">
+                    <h3 class="text-uppercase text-secondary mb-5">{{reward.reward_name}}</h3>
+                    <div class="text-center bg-primary rounded-circle p-4 mb-2">
+                      <h1 class="display-7 mb-0">
+                        {{reward.reward_name}}
+                      </h1>
+                    </div>
+                    <div class="text-center text-secondary">
+                      <p>{{reward.description}}</p>
+                    </div>
+                    <div class="text-center text-secondary">
+                      <ng-container *ngIf="currentUserRewards.length > 0">
+                        <ng-container *ngFor="let currentReward of currentUserRewards">
+                          <ng-container *ngIf="currentReward.rewardId === reward.rewardId">
+                            <a href="#" class="btn btn-primary text-uppercase py-2 px-4 my-3 achieved-button"><h3 class="text-uppercase text-center">Achieved</h3></a>
+                          </ng-container>
+                          <!--ng-container *ngIf="currentReward.rewardId !== reward.rewardId">
+                            <a href="#" class="btn btn-primary text-uppercase py-2 px-4 my-3"><h3 class="text-uppercase text-center">Get Now</h3></a>
+                          </ng-container-->
+                        </ng-container>
+                      </ng-container>
+                      <ng-container *ngIf="currentUserRewards.length == 0">
+                        <a href="#" class="btn btn-primary text-uppercase py-2 px-4 my-3"><h3 class="text-uppercase text-center">Get Now</h3></a>
+                      </ng-container>
+                    </div>
+                  </div>
+                </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
