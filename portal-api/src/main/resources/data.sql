@@ -13,58 +13,58 @@ values (106, 'Anti Depression', 'Anti Depression Program', 'system', '2022-12-02
 insert into program (program_id, program_name, description, created_by, created_date)
 values (107, 'Family Care', 'Customized health care program for entire family', 'system', '2022-12-02 12:00:00');
 
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1001, 'Register 101', 'Registration for the Weight Loss Program', 101, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1002, 'Week 2', 'Completed Week 2 for the Weight Loss Program', 101, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1003, 'Month 1', 'Completed Week 4 for the Weight Loss Program', 101, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1004, 'Half Way', 'Completed half of the Weight Loss Program', 101, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1005, 'Weight Loss Achievement', 'Completed 3 Months Weight Loss Program', 101, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1006, 'Register 102', 'Registration for the Ergonomics Program', 102, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1007, 'Physical Ergonomics', 'Completed Organizational Ergonomics', 102, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1008, 'Cognitive Ergonomics', 'Completed Cognitive Ergonomics', 102, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1009, 'Organizational Ergonomics', 'Completed Organizational Ergonomics', 102, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1010, 'Ergonomics Achievement', 'Completed 3 Months Ergonomics Program', 102, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1011, 'Register 103', 'Registration for the Health Wealth Program', 103, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1012, 'Session 1', 'Completed Session 1 for the Health Wealth Program', 103, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1013, 'Session 2', 'Completed Session 2 for the Health Wealth Program', 103, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1014, 'Session 3', 'Completed Session 3 for the Health Wealth Program', 103, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1015, 'Health Wealth Achievement', 'Completed 3 Sessions Health Wealth Program', 103, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1016, 'Register 104', 'Registration for the Self Management Program', 104, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1017, 'Self Management Completed', 'Completed Self Management Program', 104, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1018, 'Register 105', 'Registration for the Employee Assistance Program', 105, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1019, 'Employee Assistance Completed', 'Completed Employee Assistance Program', 105, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1020, 'Register 106', 'Registration for the Anti Depression Program', 106, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1021, 'Therapy 1', 'Completed Session 1 for the Anti Depression Program', 106, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1022, 'Therapy 2', 'Completed Session 2 for the Anti Depression Program', 106, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1023, 'Therapy 3', 'Completed Session 3 for the Anti Depression Program', 106, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1024, 'Anti Depression Completed', 'Completed 3 Therapy Anti Depression Program', 106, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1025, 'Register 107', 'Registration for the Family Care Program', 107, 'system', '2022-12-02 12:00:00');
-insert into activity (activity_id, activity, description, program_id, created_by, created_date)
-values (1026, 'Family Care Completed', 'Completed Family Care Program', 107, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1001, 'Register 101', 'Registration for the Weight Loss Program', '', 101, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1002, 'Week 2', 'Watch video to complete', 'https://www.youtube.com/embed/hQ6zGpM284Q', 101, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1003, 'Month 1', 'Completed Week 4 for the Weight Loss Program', 'https://www.youtube.com/embed/oPmhE_EmLjk', 101, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1004, 'Half Way', 'Completed half of the Weight Loss Program', 'https://www.youtube.com/embed/6stlCkUDG_s', 101, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1005, 'Weight Loss Achievement', 'Completed 3 Months Weight Loss Program', '', 101, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1006, 'Register 102', 'Registration for the Ergonomics Program', '', 102, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1007, 'Physical Ergonomics', 'Completed Organizational Ergonomics', 'https://www.youtube.com/embed/dVYl5ImNjow', 102, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1008, 'Cognitive Ergonomics', 'Completed Cognitive Ergonomics', 'https://www.youtube.com/embed/wegd5ERgQuA', 102, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1009, 'Organizational Ergonomics', 'Completed Organizational Ergonomics', 'https://www.youtube.com/embed/CmCIZ_aUAeQ', 102, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1010, 'Ergonomics Achievement', 'Completed 3 Months Ergonomics Program', '', 102, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1011, 'Register 103', 'Registration for the Health Wealth Program', '',  103, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1012, 'Session 1', 'Completed Session 1 for the Health Wealth Program', 'https://www.youtube.com/embed/Ufa33RFm_lU',  103, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1013, 'Session 2', 'Completed Session 2 for the Health Wealth Program', 'https://www.youtube.com/embed/6zRNf7Q5xQ0', 103, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1014, 'Session 3', 'Completed Session 3 for the Health Wealth Program', 'https://www.youtube.com/embed/hQ6zGpM284Q', 103, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1015, 'Health Wealth Achievement', 'Completed 3 Sessions Health Wealth Program', '', 103, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1016, 'Register 104', 'Registration for the Self Management Program', '', 104, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1017, 'Self Management Completed', 'Completed Self Management Program', 'https://www.youtube.com/embed/6stlCkUDG_s', 104, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1018, 'Register 105', 'Registration for the Employee Assistance Program', 'https://www.youtube.com/embed/3176Sw8A0EE', 105, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1019, 'Employee Assistance Completed', 'Completed Employee Assistance Program', '', 105, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1020, 'Register 106', 'Registration for the Anti Depression Program', '', 106, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1021, 'Therapy 1', 'Completed Session 1 for the Anti Depression Program', 'https://www.youtube.com/embed/wegd5ERgQuA', 106, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1022, 'Therapy 2', 'Completed Session 2 for the Anti Depression Program', 'https://www.youtube.com/embed/CmCIZ_aUAeQ', 106, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1023, 'Therapy 3', 'Completed Session 3 for the Anti Depression Program', 'https://www.youtube.com/embed/RvreULjnzFo', 106, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1024, 'Anti Depression Completed', 'Completed 3 Therapy Anti Depression Program', '', 106, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1025, 'Register 107', 'Registration for the Family Care Program', '', 107, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1026, 'Family Care Completed', 'Completed Family Care Program',  'https://www.youtube.com/embed/6zRNf7Q5xQ0', 107, 'system', '2022-12-02 12:00:00');
 
 
 insert into questionnaire (questionnaire_id, question, answer, created_by, created_date)

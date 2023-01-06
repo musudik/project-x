@@ -1,3 +1,5 @@
+
+
 <div class="container">
   <!-- Services Start -->
   <div class="container-fluid py-5">
@@ -16,13 +18,26 @@
               <mat-selection-list formControlName="selectedActivity">
                 <div class="service-item rounded p-5 mb-4">
                 <mat-list-option *ngFor="let activity of activities" [selected]="activity.selected" [value]="activity.activityId">
-                  <h4 class="text-uppercase mb-7" title="{{activity.activity}}"><span class="text-primary">{{activity.activity}}</span></h4>
+                  <h4 class="text-uppercase mb-7" title="{{activity.activity}}">
+                    <span class="text-primary"><a (click)="popupOpen(activity)">{{activity.activity}}</a></span>
+                  </h4>
                   <h4 class="text-uppercase mb-7" title="{{activity.description}}">{{activity.description}}</h4>
                 </mat-list-option>
                 </div>
               </mat-selection-list>
               <a (click)="updateActivities()" class="btn btn-primary text-uppercase py-2 px-4 my-3">Update</a>
             </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay" *ngIf="popup">
+    <div class="popup">
+      <h2>{{popupHeader}}</h2>
+      <a class="close" (click)="popupClose(selectedActivity)">&times;</a>
+      <div class="content">
+        <div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9">
+          <iframe class="embed-responsive-item" width="1080" height="720" [src]="video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
     </div>

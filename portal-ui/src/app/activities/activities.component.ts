@@ -4,6 +4,8 @@ import { ProgramService } from '../_services/program.service';
 import { TokenStorageService } from '../_services/token-storage.service';
 import { Program } from "../model/program.model";
 import { Activity } from "../model/activity.model";
+import { Pipe, PipeTransform } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-activities',
@@ -14,20 +16,19 @@ export class ActivitiesComponent implements OnInit {
 
   public msg:string;
   public reconProgram: any;
+  public selectedActivity:Activity;
   public activities: any[]
   public selectedActivities: any[]
   public program:string;
+  public popup:boolean = false
+  public video:SafeResourceUrl;
+  public popupHeader:string;
 
-  techList = [
-      {id: 101, lang: 'Java'},
-      {id: 102, lang: 'Angular'},
-      {id: 103, lang: 'Hibernate'}
-    ];
   activityForm = this.formBuilder.group({
     selectedActivity: ''
   });
 
-  constructor(private programService: ProgramService, private tokenStorage: TokenStorageService, private formBuilder: FormBuilder) {
+  constructor(private sanitizer: DomSanitizer, private programService: ProgramService, private tokenStorage: TokenStorageService, private formBuilder: FormBuilder) {
     this.msg = '';
   }
 
@@ -79,5 +80,34 @@ export class ActivitiesComponent implements OnInit {
             this.msg = err.error.message;
           }
        );
+  }
+
+  popupOpen(activity:Activity) {
+    if (activity.video !== '') {
+      this.selectedActivity = activity;
+      this.popup = true;
+      this.popupHeader = activity.activity;
+      this.video = this.sanitizer.bypassSecurityTrustResourceUrl(activity.video);
+      console.log(this.video);
+      if(this.activities.length > 0) {
+        for (let i = 0; i < this.activities.length; i++) {
+            if(this.selectedActivity.activityId == this.activities[i].activityId) {
+              this.activities[i].selected = false;
+            }
+        }
+      }
+    }
+  }
+
+  popupClose(activity:Activity) {
+    this.selectedActivity = activity;
+    if(this.activities.length > 0) {
+      for (let i = 0; i < this.activities.length; i++) {
+          if(this.selectedActivity.activityId == this.activities[i].activityId) {
+            this.activities[i].selected = true;
+          }
+      }
+    }
+    this.popup = false;
   }
 }

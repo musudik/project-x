@@ -6,6 +6,7 @@ export class Activity {
     public activity: string,
     public complete: boolean,
     public description: string,
+    public video: string,
     public createdDate: string,
     public createdBy: string,
     public updatedDate: string,
@@ -18,6 +19,6 @@ export class Activity {
 })
 export class ActivityAdapter {
   adapt(item: any): Activity {
-    return new Activity(item.activityId, item.activity, item.complete, item.description, item.createdDate, item.createdBy, item.updatedDate, item.updatedBy);
+    return new Activity(item.activityId, item.activity, item.complete, item.description, item.video, item.createdDate, item.createdBy, item.updatedDate, item.updatedBy);
   }
 }

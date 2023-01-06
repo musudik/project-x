@@ -31,6 +31,9 @@ public class Activity extends BaseEntity implements Serializable {
     @Column(name = "description", nullable = false)
     private String description;
 
+    @Column(name = "video")
+    private String video;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "program")
     @OnDelete(action = OnDeleteAction.CASCADE)
@@ -66,5 +69,13 @@ public class Activity extends BaseEntity implements Serializable {
 
     public void setProgram(Program program) {
         this.program = program;
+    }
+
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
     }
 }
