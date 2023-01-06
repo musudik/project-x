@@ -1,5 +1,3 @@
-
-
 <div class="container">
   <!-- Services Start -->
   <div class="container-fluid py-5">
@@ -18,10 +16,10 @@
               <mat-selection-list formControlName="selectedActivity">
                 <div class="service-item rounded p-5 mb-4">
                 <mat-list-option *ngFor="let activity of activities" [selected]="activity.selected" [value]="activity.activityId">
-                  <h4 class="text-uppercase mb-7" title="{{activity.activity}}">
-                    <span class="text-primary"><a (click)="popupOpen(activity)">{{activity.activity}}</a></span>
-                  </h4>
-                  <h4 class="text-uppercase mb-7" title="{{activity.description}}">{{activity.description}}</h4>
+                    <h4 class="text-uppercase mb-7" title="{{activity.activity}}">
+                      <span class="text-primary"><a (click)="popupOpen(activity)">{{activity.activity}}</a></span>
+                    </h4>
+                    <h4 class="text-uppercase mb-7" title="{{activity.description}}"><a (click)="popupOpen(activity)">{{activity.description}}</a></h4>
                 </mat-list-option>
                 </div>
               </mat-selection-list>
@@ -33,7 +31,10 @@
   </div>
   <div class="overlay" *ngIf="popup">
     <div class="popup">
-      <h2>{{popupHeader}}</h2>
+      <h4 class="text-uppercase mb-7">
+        <span class="text-primary">{{selectedActivity.activity}}</span>
+      </h4>
+      <h4 class="text-uppercase mb-7">{{selectedActivity.description}}</h4>
       <a class="close" (click)="popupClose(selectedActivity)">&times;</a>
       <div class="content">
         <div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9">

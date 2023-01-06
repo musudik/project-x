@@ -16,11 +16,11 @@ values (107, 'Family Care', 'Customized health care program for entire family', 
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
 values (1001, 'Register 101', 'Registration for the Weight Loss Program', '', 101, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
-values (1002, 'Week 2', 'Watch video to complete', 'https://www.youtube.com/embed/hQ6zGpM284Q', 101, 'system', '2022-12-02 12:00:00');
+values (1002, 'Stage 1', 'Watch video clip with in first Month', 'https://www.youtube.com/embed/hQ6zGpM284Q', 101, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
-values (1003, 'Month 1', 'Completed Week 4 for the Weight Loss Program', 'https://www.youtube.com/embed/oPmhE_EmLjk', 101, 'system', '2022-12-02 12:00:00');
+values (1003, 'Stage 2', 'Watch video clip with in second Month', 'https://www.youtube.com/embed/oPmhE_EmLjk', 101, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
-values (1004, 'Half Way', 'Completed half of the Weight Loss Program', 'https://www.youtube.com/embed/6stlCkUDG_s', 101, 'system', '2022-12-02 12:00:00');
+values (1004, 'Stage 3', 'Watch video clip with in third Month', 'https://www.youtube.com/embed/6stlCkUDG_s', 101, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
 values (1005, 'Weight Loss Achievement', 'Completed 3 Months Weight Loss Program', '', 101, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
