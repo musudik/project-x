@@ -26,6 +26,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SafePipe } from './safe.pipe';
+import { VideoModule } from './video/video.module';
 
 @NgModule({
   declarations: [

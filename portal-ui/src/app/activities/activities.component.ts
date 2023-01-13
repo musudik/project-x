@@ -14,6 +14,7 @@ import { DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 })
 export class ActivitiesComponent implements OnInit {
 
+  public videoEnd: any;
   public msg:string;
   public reconProgram: any;
   public selectedActivity:Activity;
@@ -87,7 +88,8 @@ export class ActivitiesComponent implements OnInit {
       this.selectedActivity = activity;
       this.popup = true;
       this.popupHeader = activity.activity;
-      this.video = this.sanitizer.bypassSecurityTrustResourceUrl(activity.video);
+      //this.video = this.sanitizer.bypassSecurityTrustResourceUrl(activity.video);
+      this.video = activity.video;
       console.log(this.video);
       if(this.activities.length > 0) {
         for (let i = 0; i < this.activities.length; i++) {
@@ -108,6 +110,19 @@ export class ActivitiesComponent implements OnInit {
           }
       }
     }
+    this.updateActivities();
     this.popup = false;
   }
+
+  onVideoEnd(activity:Activity) {
+      this.selectedActivity = activity;
+      if(this.activities.length > 0) {
+        for (let i = 0; i < this.activities.length; i++) {
+            if(this.selectedActivity.activityId == this.activities[i].activityId) {
+              this.activities[i].selected = true;
+            }
+        }
+      }
+      this.popup = false;
+    }
 }

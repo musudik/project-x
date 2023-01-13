@@ -16,55 +16,55 @@ values (107, 'Family Care', 'Customized health care program for entire family', 
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
 values (1001, 'Register 101', 'Registration for the Weight Loss Program', '', 101, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
-values (1002, 'Stage 1', 'Watch video clip with in first Month', 'https://www.youtube.com/embed/hQ6zGpM284Q', 101, 'system', '2022-12-02 12:00:00');
+values (1002, 'Stage 1', 'Watch video clip with in first Month', 'https://joy1.videvo.net/videvo_files/video/free/video0462/large_watermarked/_import_60f12798440071.31111929_preview.mp4', 101, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
-values (1003, 'Stage 2', 'Watch video clip with in second Month', 'https://www.youtube.com/embed/oPmhE_EmLjk', 101, 'system', '2022-12-02 12:00:00');
+values (1003, 'Stage 2', 'Watch video clip with in second Month', 'https://joy.videvo.net/videvo_files/video/premium/video0235/large_watermarked/NO%20MR_STOCK%20FOOTAGE%20NO%20MR%20(505)_preview.mp4', 101, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
-values (1004, 'Stage 3', 'Watch video clip with in third Month', 'https://www.youtube.com/embed/6stlCkUDG_s', 101, 'system', '2022-12-02 12:00:00');
+values (1004, 'Stage 3', 'Watch video clip with in third Month', 'https://joy.videvo.net/videvo_files/video/premium/video0235/large_watermarked/NO%20MR_STOCK%20FOOTAGE%20NO%20MR%20(544)_preview.mp4', 101, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
 values (1005, 'Weight Loss Achievement', 'Completed 3 Months Weight Loss Program', '', 101, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
 values (1006, 'Register 102', 'Registration for the Ergonomics Program', '', 102, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
-values (1007, 'Physical Ergonomics', 'Completed Organizational Ergonomics', 'https://www.youtube.com/embed/dVYl5ImNjow', 102, 'system', '2022-12-02 12:00:00');
+values (1007, 'Physical Ergonomics', 'Completed Organizational Ergonomics', 'https://joy.videvo.net/videvo_files/video/premium/video0235/large_watermarked/NO%20MR_STOCK%20FOOTAGE%20NO%20MR%20(810)_preview.mp4', 102, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
-values (1008, 'Cognitive Ergonomics', 'Completed Cognitive Ergonomics', 'https://www.youtube.com/embed/wegd5ERgQuA', 102, 'system', '2022-12-02 12:00:00');
+values (1008, 'Cognitive Ergonomics', 'Completed Cognitive Ergonomics', 'https://joy.videvo.net/videvo_files/video/premium/partners0406/large_watermarked/BB_e6830c9f-5595-4c60-86bf-6224b0a56c67_preview.mp4', 102, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
-values (1009, 'Organizational Ergonomics', 'Completed Organizational Ergonomics', 'https://www.youtube.com/embed/CmCIZ_aUAeQ', 102, 'system', '2022-12-02 12:00:00');
+values (1009, 'Organizational Ergonomics', 'Completed Organizational Ergonomics', 'https://joy.videvo.net/videvo_files/video/premium/video0222/large_watermarked/NO%20MR_ADDITIONAL%20STOCK%20FOOTAGE%202%20NO%20MODEL%20RELEASE%20(65)_preview.mp4', 102, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
 values (1010, 'Ergonomics Achievement', 'Completed 3 Months Ergonomics Program', '', 102, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
 values (1011, 'Register 103', 'Registration for the Health Wealth Program', '',  103, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
-values (1012, 'Session 1', 'Completed Session 1 for the Health Wealth Program', 'https://www.youtube.com/embed/Ufa33RFm_lU',  103, 'system', '2022-12-02 12:00:00');
+values (1012, 'Session 1', 'Completed Session 1 for the Health Wealth Program', 'https://cdn.videvo.net/videvo_files/video/premium/getty_9/large_watermarked/istock-963280000_preview.mp4',  103, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
-values (1013, 'Session 2', 'Completed Session 2 for the Health Wealth Program', 'https://www.youtube.com/embed/6zRNf7Q5xQ0', 103, 'system', '2022-12-02 12:00:00');
+values (1013, 'Session 2', 'Completed Session 2 for the Health Wealth Program', 'https://joy1.videvo.net/videvo_files/video/free/2019-01/large_watermarked/181015_13_Venice%20Beach%20Drone_25_preview.mp4', 103, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
-values (1014, 'Session 3', 'Completed Session 3 for the Health Wealth Program', 'https://www.youtube.com/embed/hQ6zGpM284Q', 103, 'system', '2022-12-02 12:00:00');
+values (1014, 'Session 3', 'Completed Session 3 for the Health Wealth Program', 'https://joy1.videvo.net/videvo_files/video/free/2019-01/large_watermarked/181015_12b_Venice%20Beach_014_preview.mp4', 103, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
 values (1015, 'Health Wealth Achievement', 'Completed 3 Sessions Health Wealth Program', '', 103, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
 values (1016, 'Register 104', 'Registration for the Self Management Program', '', 104, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
-values (1017, 'Self Management Completed', 'Completed Self Management Program', 'https://www.youtube.com/embed/6stlCkUDG_s', 104, 'system', '2022-12-02 12:00:00');
+values (1017, 'Self Management Completed', 'Completed Self Management Program', 'https://joy1.videvo.net/videvo_files/video/free/2019-01/large_watermarked/181015_12b_Venice%20Beach_001_preview.mp4', 104, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
-values (1018, 'Register 105', 'Registration for the Employee Assistance Program', 'https://www.youtube.com/embed/3176Sw8A0EE', 105, 'system', '2022-12-02 12:00:00');
+values (1018, 'Register 105', 'Registration for the Employee Assistance Program', 'https://joy1.videvo.net/videvo_files/video/free/2015-07/large_watermarked/A0425_F1502_H2_807_1105_Videvo_preview.mp4', 105, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
 values (1019, 'Employee Assistance Completed', 'Completed Employee Assistance Program', '', 105, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
 values (1020, 'Register 106', 'Registration for the Anti Depression Program', '', 106, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
-values (1021, 'Therapy 1', 'Completed Session 1 for the Anti Depression Program', 'https://www.youtube.com/embed/wegd5ERgQuA', 106, 'system', '2022-12-02 12:00:00');
+values (1021, 'Therapy 1', 'Completed Session 1 for the Anti Depression Program', 'https://joy1.videvo.net/videvo_files/video/free/2016-09/large_watermarked/160820_010_NYC_GrandCentralStationClock2_1080p_preview.mp4', 106, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
-values (1022, 'Therapy 2', 'Completed Session 2 for the Anti Depression Program', 'https://www.youtube.com/embed/CmCIZ_aUAeQ', 106, 'system', '2022-12-02 12:00:00');
+values (1022, 'Therapy 2', 'Completed Session 2 for the Anti Depression Program', 'https://joy1.videvo.net/videvo_files/video/free/2016-09/large_watermarked/160820_121_NYC_OutOfFocusCarLights_1080p_preview.mp4', 106, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
-values (1023, 'Therapy 3', 'Completed Session 3 for the Anti Depression Program', 'https://www.youtube.com/embed/RvreULjnzFo', 106, 'system', '2022-12-02 12:00:00');
+values (1023, 'Therapy 3', 'Completed Session 3 for the Anti Depression Program', 'https://joy1.videvo.net/videvo_files/video/free/2016-09/large_watermarked/160820_032_NYC_RainStreet2_1080p_preview.mp4', 106, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
 values (1024, 'Anti Depression Completed', 'Completed 3 Therapy Anti Depression Program', '', 106, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
 values (1025, 'Register 107', 'Registration for the Family Care Program', '', 107, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
-values (1026, 'Family Care Completed', 'Completed Family Care Program',  'https://www.youtube.com/embed/6zRNf7Q5xQ0', 107, 'system', '2022-12-02 12:00:00');
+values (1026, 'Family Care Completed', 'Completed Family Care Program',  'https://joy1.videvo.net/videvo_files/video/free/2016-09/large_watermarked/160820_233_NYC_TimeSquare5_1080p_preview.mp4', 107, 'system', '2022-12-02 12:00:00');
 
 
 insert into questionnaire (questionnaire_id, question, answer, created_by, created_date)

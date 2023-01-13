@@ -11,6 +11,7 @@
             <p class="m-0">{{this.reconProgram.description}}</p>
           </div>
         </div>
+
         <div class="col-lg-8 mb-2">
             <form [formGroup]="activityForm" (ngSubmit)="onFormSubmit()">
               <mat-selection-list formControlName="selectedActivity">
@@ -35,17 +36,17 @@
         <span class="text-primary">{{selectedActivity.activity}}</span>
       </h4>
       <h4 class="text-uppercase mb-7">{{selectedActivity.description}}</h4>
-      <a class="close" (click)="popupClose(selectedActivity)">&times;</a>
+      <a class="close" (click)="popupClose(selectedActivity)" style="visibility:hidden;display:none;" id="closeButton">FINISH</a>
       <div class="content">
-        <div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9">
-          <iframe class="embed-responsive-item" width="1080" height="720" [src]="video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9" style="width:1080;height:720">
+          <video controls autoplay onended="onVideoEnd()" src="{{video}}" width="1080" height="720"></video>
         </div>
       </div>
     </div>
   </div>
   <!-- Services End -->
-
   <div class="alert alert-success" *ngIf="msg">
     {{ msg }}
   </div>
 </div>
+
