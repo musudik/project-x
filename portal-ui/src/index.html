@@ -25,6 +25,28 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+      var app = angular.module('myApp', []);
+      app.controller('mycontroller', function($scope) {
+            alert(1);
+            $scope.onSelectFile = function($files) {
+              for (var i = 0; i < $files.length; i++) {
+                var $file = $files[i];
+                $upload.upload({
+                    url: 'api/HomeControler/upload',
+                    file: $file,
+                    progress: function(e) {
+                      // wait...
+                    }
+                  })
+                  .then(function(data, status, headers, config) {
+                    alert('file is uploaded successfully');
+                  });
+              }
+              alert('file is uploaded successfully');
+            }
+          };
+    </script>
 </head>
   <body class="mat-typography">
     <app-root></app-root>

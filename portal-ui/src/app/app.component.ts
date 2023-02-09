@@ -8,6 +8,7 @@ import { TokenStorageService } from './_services/token-storage.service';
 })
 export class AppComponent {
   private roles: string[] = [];
+  role = '';
   isLoggedIn = false;
   showAdminBoard = false;
   showModeratorBoard = false;
@@ -24,9 +25,14 @@ export class AppComponent {
       const user = this.tokenStorageService.getUser();
       this.username = user.username;
       console.log("Token User:"+user.username);
-      this.roles = user.roles;
-      this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
-      this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
+      this.role = user.role;
+      if (this.role === 'admin') {
+        this.showAdminBoard = true;
+      }
+      console.log("role User:"+this.role);
+      console.log("showAdminBoard:"+this.showAdminBoard);
+//       this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
+//       this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
     }
   }
 

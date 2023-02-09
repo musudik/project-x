@@ -7,7 +7,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -58,5 +58,18 @@ public class AuthService {
             throw new UsernameNotFoundException("User with the id:"+id+" is not found");
         }
         return loggedUser.get();
+    }
+
+    /**
+     * get user by id.
+     * @return
+     * @throws UsernameNotFoundException
+     */
+    public List<User> getUsers() throws UsernameNotFoundException {
+        final List<User> users = userRepository.findAll();
+        if(users == null) {
+            throw new UsernameNotFoundException("No Users are found");
+        }
+        return users;
     }
 }

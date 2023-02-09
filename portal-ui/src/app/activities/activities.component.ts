@@ -24,6 +24,13 @@ export class ActivitiesComponent implements OnInit {
   public popup:boolean = false
   public video:SafeResourceUrl;
   public popupHeader:string;
+  public fileUpload:boolean = false
+  public fileUploadHeader:string;
+
+  // Variable to store shortLink from api response
+  public shortLink: string = "";
+  public loading: boolean = false; // Flag variable
+  public file: File = null; // Variable to store file
 
   activityForm = this.formBuilder.group({
     selectedActivity: ''
@@ -84,22 +91,29 @@ export class ActivitiesComponent implements OnInit {
   }
 
   popupOpen(activity:Activity) {
+    this.selectedActivity = activity;
     if (activity.video !== '') {
-      this.selectedActivity = activity;
       this.popup = true;
       this.popupHeader = activity.activity;
       //this.video = this.sanitizer.bypassSecurityTrustResourceUrl(activity.video);
       this.video = activity.video;
       console.log(this.video);
-      if(this.activities.length > 0) {
-        for (let i = 0; i < this.activities.length; i++) {
-            if(this.selectedActivity.activityId == this.activities[i].activityId) {
-              this.activities[i].selected = false;
-            }
-        }
+    }
+    if(activity.activity == 'Upload Feedback') {
+      this.selectedActivity = activity;
+      this.fileUpload = true;
+      this.fileUploadHeader = "Please upload your feedback file";
+    }
+
+    if(this.activities.length > 0) {
+      for (let i = 0; i < this.activities.length; i++) {
+          if(this.selectedActivity.activityId == this.activities[i].activityId) {
+            this.activities[i].selected = false;
+          }
       }
     }
   }
+
 
   popupClose(activity:Activity) {
     this.selectedActivity = activity;
@@ -112,6 +126,7 @@ export class ActivitiesComponent implements OnInit {
     }
     this.updateActivities();
     this.popup = false;
+    this.fileUpload = false;
   }
 
   onVideoEnd(activity:Activity) {
@@ -125,4 +140,28 @@ export class ActivitiesComponent implements OnInit {
       }
       this.popup = false;
     }
+
+  // On file Select
+  onChange(event: any) {
+      alert(event);
+      this.file = event.target.files[0];
+      alert(this.file);
+  }
+
+  // OnClick of button Upload
+  onUpload() {
+      this.loading = !this.loading;
+      console.log(this.file);
+      this.programService.upload(this.file).subscribe(
+          (event: any) => {
+              if (typeof (event) === 'object') {
+
+                  // Short link via api response
+                  this.shortLink = event.link;
+
+                  this.loading = false; // Flag variable
+              }
+          }
+      );
+  }
 }

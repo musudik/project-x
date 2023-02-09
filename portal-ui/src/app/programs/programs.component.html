@@ -60,9 +60,10 @@
           <td>{{program.programId}}</td>
           <td>{{program.program_name}}</td>
           <td>{{program.description}}</td>
-          <td><a *ngIf="!userPrograms.includes(program.programId)" (click)="registerProgram(program.programId)" class="btn btn-primary text-uppercase py-2 px-4 my-3">Register</a>
+          <td *ngIf="program.active"><a *ngIf="!userPrograms.includes(program.programId)" (click)="registerProgram(program.programId)" class="btn btn-primary text-uppercase py-2 px-4 my-3">Register</a>
               <a *ngIf="userPrograms.includes(program.programId)" (click)="deregisterProgram(program.programId)" class="btn btn-dark text-uppercase py-2 px-4 my-3">Deregister</a></td>
-          <td><a *ngIf="userPrograms.includes(program.programId)" class="btn btn-dark text-uppercase py-2 px-4 my-3 mb-5" (click)="goToActivities(program.programId)">Activities</a></td>
+          <td *ngIf="!program.active"><a class="btn text-uppercase py-2 px-4 my-3">Inactive</a>
+          <td *ngIf="program.active"><a *ngIf="userPrograms.includes(program.programId)" class="btn btn-dark text-uppercase py-2 px-4 my-3 mb-5" (click)="goToActivities(program.programId)">Activities</a></td>
         </tr>
         </ng-container>
         </tbody>

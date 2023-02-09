@@ -14,6 +14,7 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 import java.util.UUID;
 
 @CrossOrigin(origins = "http://localhost:8081")
@@ -103,5 +104,22 @@ public class AuthController {
     private void sendEmail(User user) {
         emailService.sendSimpleMessage(user.getEmail(),
                 "Signup Successful", "Hello, User Signup successful   -Thanks!");
+    }
+
+    @GetMapping("getUsers")
+    public ResponseEntity<Result> getUsers() {
+
+        Result result = new Result();
+        try {
+            List<User> users = authService.getUsers();
+            result.setResult(Result.SUCCESS);
+            result.setMessage("No.of users found are: " + users.size());
+            result.setOutput(users);
+            return new ResponseEntity<>(result, HttpStatus.OK);
+        } catch (Exception e) {
+            result.setResult(Result.FAILED);
+            result.setMessage("No.of users found/registered");
+            return new ResponseEntity<>(result, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 }

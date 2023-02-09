@@ -13,7 +13,8 @@ export class User {
     public createdBy: string,
     public updatedDate: string,
     public updatedBy: string,
-    public accessToken: string
+    public accessToken: string,
+    public active: boolean
   ) {}
 }
 
@@ -23,6 +24,6 @@ export class User {
 export class UserAdapter {
   adapt(item: any): User {
     return new User(item.id, item.firstName, item.lastName, item.email, item.username, item.password,
-    item.programs, item.createdDate, item.createdBy, item.updatedDate, item.updatedBy, item.accessToken);
+    item.programs, item.createdDate, item.createdBy, item.updatedDate, item.updatedBy, item.accessToken, item.active);
   }
 }

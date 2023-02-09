@@ -9,7 +9,8 @@ export class Program {
     public createdBy: string,
     public updatedDate: string,
     public updatedBy: string,
-    public user: string
+    public user: string,
+    public active: boolean
   ) {}
 }
 
@@ -18,6 +19,7 @@ export class Program {
 })
 export class ProgramAdapter {
   adapt(item: any): Program {
-    return new Program(item.programId, item.program_name, item.description, item.createdDate, item.createdBy, item.updatedDate, item.updatedBy, item.user);
+    return new Program(item.programId, item.program_name, item.description,
+    item.createdDate, item.createdBy, item.updatedDate, item.updatedBy, item.user, item.active);
   }
 }

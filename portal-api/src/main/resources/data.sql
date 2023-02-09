@@ -1,17 +1,19 @@
-insert into program (program_id, program_name, description, created_by, created_date)
-values (101, 'Weight Loss Program', 'Weight loss programs that offer counseling and education, 3 Months Duration', 'system', '2022-12-02 12:00:00');
-insert into program (program_id, program_name, description, created_by, created_date)
-values (102, 'Ergonomic Program', 'Ergonomic assessments and equipment', 'system', '2022-12-02 12:00:00');
-insert into program (program_id, program_name, description, created_by, created_date)
-values (103, 'Health Wealth Program', 'Health and Wealth care for individuals', 'system', '2022-12-02 12:00:00');
-insert into program (program_id, program_name, description, created_by, created_date)
-values (104, 'eaps', 'Employee Assistance Programs', 'system', '2022-12-02 12:00:00');
-insert into program (program_id, program_name, description, created_by, created_date)
-values (105, 'Self Management Program', 'Chronic disease self-management tools', 'system', '2022-12-02 12:00:00');
-insert into program (program_id, program_name, description, created_by, created_date)
-values (106, 'Anti Depression', 'Anti Depression Program', 'system', '2022-12-02 12:00:00');
-insert into program (program_id, program_name, description, created_by, created_date)
-values (107, 'Family Care', 'Customized health care program for entire family', 'system', '2022-12-02 12:00:00');
+insert into program (program_id, program_name, description, created_by, created_date, active)
+values (101, 'Weight Loss Program', 'Weight loss programs that offer counseling and education, 3 Months Duration', 'system', '2022-12-02 12:00:00', 1);
+insert into program (program_id, program_name, description, created_by, created_date, active)
+values (102, 'Ergonomic Program', 'Ergonomic assessments and equipment', 'system', '2022-12-02 12:00:00', 1);
+insert into program (program_id, program_name, description, created_by, created_date, active)
+values (103, 'Health Wealth Program', 'Health and Wealth care for individuals', 'system', '2022-12-02 12:00:00', 1);
+insert into program (program_id, program_name, description, created_by, created_date, active)
+values (104, 'eaps', 'Employee Assistance Programs', 'system', '2022-12-02 12:00:00', 1);
+insert into program (program_id, program_name, description, created_by, created_date, active)
+values (105, 'Self Management Program', 'Chronic disease self-management tools', 'system', '2022-12-02 12:00:00', 1);
+insert into program (program_id, program_name, description, created_by, created_date, active)
+values (106, 'Anti Depression', 'Anti Depression Program', 'system', '2022-12-02 12:00:00', 1);
+insert into program (program_id, program_name, description, created_by, created_date, active)
+values (107, 'Family Care', 'Customized health care program for entire family', 'system', '2022-12-02 12:00:00', 1);
+insert into program (program_id, program_name, description, created_by, created_date, active)
+values (108, 'Carona Care', 'Special care for Corona infected', 'system', '2022-12-02 12:00:00', 0);
 
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
 values (1001, 'Register 101', 'Registration for the Weight Loss Program', '', 101, 'system', '2022-12-02 12:00:00');
@@ -65,7 +67,20 @@ insert into activity (activity_id, activity, description, video, program_id, cre
 values (1025, 'Register 107', 'Registration for the Family Care Program', '', 107, 'system', '2022-12-02 12:00:00');
 insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
 values (1026, 'Family Care Completed', 'Completed Family Care Program',  'https://joy1.videvo.net/videvo_files/video/free/2016-09/large_watermarked/160820_233_NYC_TimeSquare5_1080p_preview.mp4', 107, 'system', '2022-12-02 12:00:00');
-
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1027, 'Upload Feedback', 'Fill the PDF form and upload your feedback', '', 101, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1028, 'Upload Feedback', 'Fill the PDF form and upload your feedback', '', 102, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1029, 'Upload Feedback', 'Fill the PDF form and upload your feedback', '', 103, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1030, 'Upload Feedback', 'Fill the PDF form and upload your feedback', '', 104, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1031, 'Upload Feedback', 'Fill the PDF form and upload your feedback', '', 105, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1032, 'Upload Feedback', 'Fill the PDF form and upload your feedback', '', 106, 'system', '2022-12-02 12:00:00');
+insert into activity (activity_id, activity, description, video, program_id, created_by, created_date)
+values (1033, 'Upload Feedback', 'Fill the PDF form and upload your feedback', '', 107, 'system', '2022-12-02 12:00:00');
 
 insert into questionnaire (questionnaire_id, question, answer, created_by, created_date)
 values (1, 'How often can we take an doctor appointment in a week?', '2 times maximum', 'system', '2022-12-02 12:00:00');
@@ -262,4 +277,6 @@ values (63,'No', 18, 103, 'system', '2022-12-02 12:00:00');
 insert into answer (answer_id, answer, question_id, program_id, created_by, created_date)
 values (64,'Yes', 18, 103, 'system', '2022-12-02 12:00:00');
 
+INSERT INTO user (user_id, created_by, created_date, active, email, first_name, last_name, username, password, role)
+VALUES (1, 'system', '2022-12-02 12:00:00', 1, 'admin@portal.co', 'optum', 'admin', 'admin', 'abc123', 'admin');
 commit;

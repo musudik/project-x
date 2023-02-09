@@ -49,6 +49,9 @@ public class Program extends BaseEntity implements Serializable {
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	private User user;
 
+	@Column(name = "active")
+	private Boolean active;
+
 	public Long getProgramId() {
 		return programId;
 	}
@@ -87,5 +90,13 @@ public class Program extends BaseEntity implements Serializable {
 
 	public void setActivities(List<Activity> activities) {
 		this.activities = activities;
+	}
+
+	public Boolean getActive() {
+		return active;
+	}
+
+	public void setActive(Boolean active) {
+		this.active = active;
 	}
 }
