@@ -122,6 +122,10 @@ public class User extends BaseEntity implements Serializable {
         this.password=password;
     }
 
+    public Boolean getActive() {
+        return active;
+    }
+
     public void setActive(Boolean active) {
         this.active = active;
     }

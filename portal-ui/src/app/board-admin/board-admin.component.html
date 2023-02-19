@@ -35,27 +35,106 @@
       <tr>
         <th>S.No</th>
         <th>User Name</th>
-        <th>Email</th>
         <th>First Name</th>
         <th>Last Name</th>
-        <th>Active</th>
       </tr>
       </thead>
       <tbody>
 
       <ng-container *ngFor="let user of users">
-        <tr>
+        <tr (click)="showProfileDiv(user.id)">
           <td>{{user.id}}</td>
           <td>{{user.username}}</td>
-          <td>{{user.email}}</td>
           <td>{{user.firstName}}</td>
           <td>{{user.lastName}}</td>
-          <td>{{user.active}}</td>
-          <!--td><a *ngIf="userPrograms.includes(program.programId)" class="btn btn-dark text-uppercase py-2 px-4 my-3 mb-5" (click)="goToActivities(program.programId)">Yes</a></td-->
         </tr>
       </ng-container>
       </tbody>
     </table>
+  </div>
+
+  <div class="container" *ngIf="showProfile">
+    <div class="card u-clearfix">
+      <span class="card-heading"><h6 class="text-uppercase text-primary"><i class="fa fa-user"></i> Name</h6></span>
+      <ul class="card-list">
+        <div class="row mx-0 align-items-center px-5">
+          <h6 class="text-uppercase">{{ currentUser.firstName }} {{ currentUser.lastName }}</h6>
+        </div>
+      </ul>
+      <span class="card-heading"><h6 class="text-uppercase text-primary"><i class="fa fa-heartbeat"></i> Age</h6></span>
+      <ul class="card-list">
+        <div class="row mx-0 align-items-center px-5">
+          <h6 class="text-uppercase">27</h6>
+        </div>
+      </ul>
+      <span class="card-heading"><h6 class="text-uppercase text-primary"><i class="fa fa-envelope"></i> Active</h6></span>
+      <ul class="card-list">
+        <div class="row mx-0 align-items-center px-5">
+          <h6 class="text-uppercase">{{ currentUser.active}}</h6>
+        </div>
+      </ul>
+      <span class="card-heading"><h6 class="text-uppercase text-primary"><i class="fa fa-envelope"></i> Email</h6></span>
+      <ul class="card-list">
+        <div class="row mx-0 align-items-center px-5">
+          <h6 class="text-uppercase">{{ currentUser.email}}</h6>
+        </div>
+      </ul>
+      <span class="card-heading"><h6 class="text-uppercase text-primary"><i class="fa fa-user"></i> Username</h6></span>
+      <ul class="card-list">
+        <div class="row mx-0 align-items-center px-5">
+          <h6 class="text-uppercase">{{ currentUser.username}}</h6>
+        </div>
+      </ul>
+      <span class="card-heading"><h6 class="text-uppercase text-primary"><i class="fa fa-calendar-alt"></i> Registered On</h6></span>
+      <ul class="card-list">
+        <div class="row mx-0 align-items-center px-5">
+          <h6 class="text-uppercase">{{ currentUser.createdDate }}</h6>
+        </div>
+      </ul>
+      <span class="card-heading"><h6 class="text-uppercase text-primary"><i class="fa fa-tasks"></i> Programs</h6></span>
+      <ul class="card-list">
+        <ng-container *ngFor="let program of currentUser.programs">
+          <div class="row mx-0 align-items-center px-5">
+            <span (click)="showActivitiesDiv(currentUser.id, program.programId)">
+              <h6 class="text-uppercase"><i class="fa fa-check-square"></i> {{ program.program_name }}</h6>
+            </span>
+            <div class="container" *ngIf="showActivities && currentProgram == program.programId">
+
+              <mat-selection-list>
+                <div [class.isDisabled]="true">
+                  <mat-list-option *ngFor="let activity of activities" [selected]="activity.selected" [value]="activity.activityId">
+                    <h4 class="text-uppercase mb-7" title="{{activity.activity}}">
+                      <span class="text-primary">{{activity.activity}}</span>
+                    </h4>
+                    <h4 class="text-uppercase mb-7" title="{{activity.description}}">{{activity.description}}</h4>
+                  </mat-list-option>
+                </div>
+              </mat-selection-list>
+
+              <!--ng-container *ngFor="let activity of selectedActivities">
+                <ul class="card-list">
+                  <div class="row mx-0 align-items-center px-5">
+                    <span>
+                      <h6 class="text-uppercase"><i class="fa fa-check-square"></i> {{ activity }}</h6>
+                    </span>
+                  </div>
+                </ul>
+              </ng-container-->
+            </div>
+          </div>
+        </ng-container>
+      </ul>
+      <span class="card-heading"><h6 class="text-uppercase text-primary"><i class="fa fa-star"></i> Rewards</h6></span>
+      <ul class="card-list">
+        <ng-container *ngFor="let reward of currentUser.rewards">
+          <div class="row mx-0 align-items-center px-5">
+            <span>
+              <h6 class="text-uppercase"><i class="fa fa-trophy"></i> {{ reward.reward_name }}</h6>
+            </span>
+          </div>
+        </ng-container>
+      </ul>
+    </div>
   </div>
 
   <div class="container" *ngIf="showPrograms">
