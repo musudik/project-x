@@ -39,5 +39,9 @@ export class AuthService {
 
   getUsers(): Observable<any> {
      return this.http.get(AUTH_API + 'getUsers', { });
-   }
+  }
+
+  getDoctors(): Observable<any> {
+     return this.http.get(AUTH_API + 'getDoctors', { });
+  }
 }

@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AppointmentsComponent } from './appointments/appointments.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardUserComponent } from './board-user/board-user.component';
@@ -22,6 +23,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatListModule } from '@angular/material/list'
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatMenuModule } from '@angular/material/menu';
+
 
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -35,6 +41,7 @@ import { VideoModule } from './video/video.module';
     RegisterComponent,
     HomeComponent,
     ProfileComponent,
+    AppointmentsComponent,
     BoardAdminComponent,
     BoardModeratorComponent,
     BoardUserComponent,
@@ -51,9 +58,12 @@ import { VideoModule } from './video/video.module';
     ReactiveFormsModule,
     HttpClientModule,
     MatButtonModule,
+    MatMenuModule,
+    MatButtonToggleModule,
     MatInputModule,
     MatIconModule,
     MatListModule,
+    MatDatepickerModule,
     MatFormFieldModule,
     BrowserAnimationsModule
   ],

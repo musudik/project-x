@@ -1,0 +1,74 @@
+<div class="container">
+  <!-- Services Start -->
+  <div class="container-fluid py-5">
+    <div class="container pt-5 pb-3">
+      <h1 class="display-4 text-uppercase text-center mb-5"><span class="text-primary">Appointment</span> Request</h1>
+      <div class="form-group">
+
+        <form name="form" (ngSubmit)="onSubmit()">
+        <legend class="display-7 text-uppercase mb-2"><b><span class="text-primary">Patient</span> Details</b></legend>
+        <fieldset>
+          <div class="form-group">
+            <label>
+              <b>Patient Name</b> :
+                {{currentUser.firstName}} {{currentUser.lastName}}
+            </label>
+          </div>
+          <div class="form-group">
+            <label>
+              <b>Email</b> :
+              {{currentUser.email}}
+            </label>
+          </div>
+          <div class="form-group">
+            <label>
+              <b>Phone number</b> :
+              +1 506 545 2343
+            </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="display-7 text-uppercase mb-2"><b><span class="text-primary">Schedule</span> Details</b></legend>
+          <div class="form-group">
+            <label>
+              <b>Doctor</b>
+              <select class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="form.selectedDoctor">
+                <option>--- SELECT ---</option>
+                <ng-container *ngFor="let doctor of doctors">
+                  <option value="{{doctor.id}}">{{doctor.firstName}} {{doctor.lastName}}</option>
+                </ng-container>
+              </select>
+            </label>
+          </div>
+          <div class="form-group">
+            <label>
+              <b>Reason</b>
+              <textarea cols="40" rows="4" name="reason" class="form-control" [(ngModel)]="form.reason"></textarea>
+            </label>
+          </div>
+          <div class="two-cols">
+              <label>
+                <b>Date</b>
+                <input type="date" class="form-control" name="Appointment request" [(ngModel)]="form.date" required>
+              </label>
+              <label>
+                <b>Time</b>
+                <input type="time" class="form-control" [(ngModel)]="form.time" name="appt" min="09:00" max="18:00" required>
+              </label>
+          </div>
+        </fieldset>
+
+        <br/>
+        <div class="btns">
+          <input type="submit" class="btn btn-primary btn-block" value="Create Appointment">
+        </div>
+        <div class="alert alert-success" *ngIf="msg">
+          {{ msg }}.
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+

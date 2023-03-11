@@ -61,15 +61,43 @@ public class AuthService {
     }
 
     /**
-     * get user by id.
+     * get all users irrespective of role.
      * @return
      * @throws UsernameNotFoundException
      */
-    public List<User> getUsers() throws UsernameNotFoundException {
+    public List<User> getAllUsers() throws UsernameNotFoundException {
         final List<User> users = userRepository.findAll();
         if(users == null) {
             throw new UsernameNotFoundException("No Users are found");
         }
         return users;
     }
+
+    /**
+     * get users by role 'user'.
+     * @return
+     * @throws UsernameNotFoundException
+     */
+    public List<User> getUsers() throws UsernameNotFoundException {
+        final List<User> users = userRepository.findUsers("user");
+        if(users == null) {
+            throw new UsernameNotFoundException("No Users are found");
+        }
+        return users;
+    }
+
+    /**
+     * get users by role 'doctor'.
+     * @return
+     * @throws UsernameNotFoundException
+     */
+    public List<User> getDoctors() throws UsernameNotFoundException {
+        final List<User> users = userRepository.findUsers("doctor");
+        if(users == null) {
+            throw new UsernameNotFoundException("No Doctors are found");
+        }
+        return users;
+    }
+
+
 }

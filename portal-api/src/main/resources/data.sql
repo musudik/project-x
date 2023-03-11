@@ -279,4 +279,12 @@ values (64,'Yes', 18, 103, 'system', '2022-12-02 12:00:00');
 
 INSERT INTO user (user_id, created_by, created_date, active, email, first_name, last_name, username, password, role)
 VALUES (1, 'system', '2022-12-02 12:00:00', 1, 'admin@portal.co', 'optum', 'admin', 'admin', 'abc123', 'admin');
+
+INSERT INTO user (user_id, created_by, created_date, active, email, first_name, last_name, username, password, role)
+VALUES (2, 'system', '2022-12-02 12:00:00', 1, 'frank.david@portal.co', 'Frank', 'David', 'fdavid', 'abc123', 'doctor');
+INSERT INTO user (user_id, created_by, created_date, active, email, first_name, last_name, username, password, role)
+VALUES (3, 'system', '2022-12-02 12:00:00', 1, 'george.kelly@portal.co', 'George', 'Kelly', 'kgeorge', 'abc123', 'doctor');
+INSERT INTO user (user_id, created_by, created_date, active, email, first_name, last_name, username, password, role)
+VALUES (4, 'system', '2022-12-02 12:00:00', 1, 'bold.horsmen@portal.co', 'bold', 'horsmen', 'bhorsmen', 'abc123', 'doctor');
+
 commit;

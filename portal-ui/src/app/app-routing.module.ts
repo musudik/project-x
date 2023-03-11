@@ -10,6 +10,7 @@ import { BoardModeratorComponent } from './board-moderator/board-moderator.compo
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { ProgramsComponent } from './programs/programs.component';
 import { ActivitiesComponent } from './activities/activities.component';
+import { AppointmentsComponent } from './appointments/appointments.component';
 import { RewardsComponent } from './rewards/rewards.component';
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
 
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'programs', component: ProgramsComponent },
   { path: 'activities', component: ActivitiesComponent },
   { path: 'rewards', component: RewardsComponent },
+  { path: 'appointments', component: AppointmentsComponent },
   { path: 'questionnaire', component: QuestionnaireComponent },
   { path: 'mod', component: BoardModeratorComponent },
   { path: 'admin', component: BoardAdminComponent },

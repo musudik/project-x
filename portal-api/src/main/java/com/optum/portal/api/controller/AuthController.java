@@ -106,6 +106,23 @@ public class AuthController {
                 "Signup Successful", "Hello, User Signup successful   -Thanks!");
     }
 
+    @GetMapping("getAllUsers")
+    public ResponseEntity<Result> getAllUsers() {
+
+        Result result = new Result();
+        try {
+            List<User> users = authService.getAllUsers();
+            result.setResult(Result.SUCCESS);
+            result.setMessage("No.of users found are: " + users.size());
+            result.setOutput(users);
+            return new ResponseEntity<>(result, HttpStatus.OK);
+        } catch (Exception e) {
+            result.setResult(Result.FAILED);
+            result.setMessage("No.of users found/registered");
+            return new ResponseEntity<>(result, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
     @GetMapping("getUsers")
     public ResponseEntity<Result> getUsers() {
 
@@ -119,6 +136,23 @@ public class AuthController {
         } catch (Exception e) {
             result.setResult(Result.FAILED);
             result.setMessage("No.of users found/registered");
+            return new ResponseEntity<>(result, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @GetMapping("getDoctors")
+    public ResponseEntity<Result> getDoctors() {
+
+        Result result = new Result();
+        try {
+            List<User> doctors = authService.getDoctors();
+            result.setResult(Result.SUCCESS);
+            result.setMessage("No.of doctors found are: " + doctors.size());
+            result.setOutput(doctors);
+            return new ResponseEntity<>(result, HttpStatus.OK);
+        } catch (Exception e) {
+            result.setResult(Result.FAILED);
+            result.setMessage("No.of doctors found/registered");
             return new ResponseEntity<>(result, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
